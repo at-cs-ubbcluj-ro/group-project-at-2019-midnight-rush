@@ -6,6 +6,8 @@ Also please fill the following details:
 - Students (SCS username - Name): 
 	cmie2095 - Coste Madalina
 	cpie2088 - Chirtes Paul
+	saie2225 - Spoiala Ana
+	ztie2249 - Zapirtan Tatiana
 
 Project idea: 
 
