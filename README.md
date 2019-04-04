@@ -3,11 +3,11 @@ Please use this repository to maintain your work for the team project.
 Also please fill the following details:
 
 - Team name: Midnight Rush
-- Students (SCS username - Name): 
-	cmie2095 - Coste Madalina
-	cpie2088 - Chirtes Paul
-	saie2225 - Spoiala Ana
-	ztie2249 - Zapirtan Tatiana
+- Students (SCS username - Name):   
+	cmie2095 - Coste Madalina  
+	cpie2088 - Chirtes Paul  
+	saie2225 - Spoiala Ana  
+	ztie2249 - Zapirtan Tatiana  
 
 Project idea: 
 
