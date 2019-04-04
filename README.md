@@ -2,10 +2,11 @@ Please use this repository to maintain your work for the team project.
 
 Also please fill the following details:
 
-- Team name:
-- Students (SCS username - Name):
+- Team name: Midnight Rush
+- Students (SCS username - Name): 
+	cmie2095 - Coste Madalina
 
-Project idea:
+Project idea: 
 
 =============
 
