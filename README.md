@@ -5,6 +5,7 @@ Also please fill the following details:
 - Team name: Midnight Rush
 - Students (SCS username - Name): 
 	cmie2095 - Coste Madalina
+	cpie2088 - Chirtes Paul
 
 Project idea: 
 
