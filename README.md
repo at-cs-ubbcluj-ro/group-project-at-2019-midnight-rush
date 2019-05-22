@@ -1,15 +1,27 @@
-Please use this repository to maintain your work for the team project.
+# Water level surveillance/monitoring.
 
-Also please fill the following details:
+### Overview
+This Android Things app measures the water level once at every second, then displays the values collected in the console. [to be completed]
 
-- Team name: Midnight Rush
-- Students (SCS username - Name):   
-	cmie2095 - Coste Madalina  
-	cpie2088 - Chirtes Paul  
-	saie2225 - Spoiala Ana  
-	ztie2249 - Zapirtan Tatiana  
+### Schematics 
+![Schematics](https://i.imgur.com/NwyL7lw.png)
 
-Project idea: 
+### Demo 
+
+### Pre-requisites
+- Raspberry Pi 3 Model B
+- Funduino Water sensor
+- Analog-to-Digital Converter ADS1115/ADS1015
+- Android Studio 2.2+
+- 1 breadboard
+- 8 wires
+
+**Team:** Midnight Rush :zap:  
+**Students** (SCS username - Name):  
+~ cmie2095 - Coste Madalina  
+~ cpie2088 - Chirtes Paul  
+~ saie2225 - Spoiala Ana  
+~ ztie2249 - Zapirtan Tatiana  
 
 =============
 
