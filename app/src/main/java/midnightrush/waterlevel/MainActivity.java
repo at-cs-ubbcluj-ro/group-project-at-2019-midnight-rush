@@ -10,14 +10,9 @@ import android.util.Log;
 import com.google.android.things.contrib.driver.adc.ads1xxx.Ads1xxx;
 
 import java.io.DataOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -69,11 +64,18 @@ public class MainActivity extends Activity {
         public void run() {
             try {
                 // Read differential between IN0+/IN1-
-                final int value = adcDriver.readDifferentialInput(Ads1xxx.INPUT_DIFF_0P_1N);
-                Log.i(TAG, "Current ADC value: " + value);
-                createRequest(value);
+                final int waterLevel = adcDriver.readDifferentialInput(Ads1xxx.INPUT_DIFF_0P_1N);
+
+                Log.i(TAG, "Current water level: " + waterLevel);
+
+                if (waterLevel < 0)
+                    // Negative values mean that there is no water
+                    createRequest(0);
+                else
+                    createRequest(waterLevel);
+
             } catch (IOException e) {
-                Log.e(TAG, "Unable to read analog sample", e);
+                Log.e(TAG, "Unable to read analog sample!", e);
             }
 
             handler.postDelayed(this, DELAY_MS);
@@ -83,20 +85,24 @@ public class MainActivity extends Activity {
     private void createRequest(int value){
         try
         {
-            URL url = new URL("http://192.168.0.107:2029/addData");
+            URL url = new URL("http://192.168.43.201:2029/addData");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
 
             con.setDoOutput(true);
             DataOutputStream out = new DataOutputStream(con.getOutputStream());
+
             String valueJSON = "value=" + value;
             out.write(valueJSON.getBytes());
+
             out.flush();
             out.close();
+
             int responseCode = con.getResponseCode();
-            Log.d(TAG, String.valueOf(responseCode));
-        }catch (Exception ex) {
-            Log.e(TAG, "Can't do rest call",ex);
+            //Log.d(TAG, "Response Code: " + String.valueOf(responseCode));
+
+        } catch (Exception ex) {
+            Log.e(TAG, "Can't do rest call!", ex);
         }
     }
 }
