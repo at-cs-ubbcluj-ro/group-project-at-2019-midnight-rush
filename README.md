@@ -1,20 +1,21 @@
 # Water level surveillance/monitoring.
 
-### Overview
+## Overview
 This Android Things app measures the water level at fixed intervals, then displays the values collected in the console. The app also sends the sensor data to a javascript server which holds all the data recorded so far. Finally, an angular server receives the sensor data and creates the column chart.
 
-### Photos
+## Photos
 ![Circuit collage](https://i.imgur.com/aeLDTay.png)
+
+Chart example. Displays the results from measuring the water level during 1 minute:
 ![Results graph](https://i.imgur.com/BuK2Qzp.png)
-> Chart example. Displays the results from measuring the water level during 1 minute
 
-
-### Schematics 
+## Schematics 
 ![Schematics](https://i.imgur.com/NwyL7lw.png)
 
-### Demo https://drive.google.com/open?id=1IlbfDa4cwdDDX-PQdXeteJXJRN4ENssg
+## Demo 
+https://drive.google.com/open?id=1IlbfDa4cwdDDX-PQdXeteJXJRN4ENssg
 
-### Pre-requisites
+## Pre-requisites
 - Raspberry Pi 3 Model B
 - Funduino Water sensor
 - Analog-to-Digital Converter ADS1115/ADS1015
