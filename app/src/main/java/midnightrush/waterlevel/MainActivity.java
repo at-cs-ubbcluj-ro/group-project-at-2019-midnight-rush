@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 
             con.setDoOutput(true);
             DataOutputStream out = new DataOutputStream(con.getOutputStream());
-            String valueJSON = "{ \"value\":"+String.valueOf(value)+"}";
+            String valueJSON = "value=" + value;
             out.write(valueJSON.getBytes());
             out.flush();
             out.close();
